@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gian hàng - InNhanh24h</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>InNhanh24h</h1>
+                <p>Thiết bị in ấn chất lượng, uy tín</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="shop.html" class="active">Gian hàng</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="login.html">Đăng nhập</a></li>
+                    <li><a href="register.html">Đăng ký</a></li>
+                    <li><a href="history.html">Lịch sử mua hàng</a></li>
+                    <li><a href="profile.html" id="profileLink">Hồ sơ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-header">
+            <div class="container">
+                <h2>Gian hàng</h2>
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." />
+                    <select id="categoryFilter">
+              <option value="all">Tất cả danh mục</option>
+              <option value="tools">Dụng cụ cầm tay</option>
+              <option value="power-tools">Dụng cụ điện</option>
+              <option value="plumbing">Thiết bị nước</option>
+              <option value="electrical">Thiết bị điện</option>
+              <option value="paint">Sơn và phụ kiện</option>
+            </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <div class="products-grid" id="productsContainer">
+                    <!-- Sản phẩm sẽ được thêm bằng JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <p>
+                    InNhanh24h cung cấp thiết bị in ấn chất lượng giá cả hợp lý và uy tín.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Email: info@innhanh24h.com</p>
+                <p>Điện thoại: 0123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <p>123 Đường ABC, Quận XYZ, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Confirm Dialog -->
+    <div id="customConfirm" class="custom-confirm">
+        <div class="confirm-dialog">
+            <div class="confirm-message">
+                Bạn có chắc chắn muốn đăng xuất không?
+            </div>
+            <div class="confirm-buttons">
+                <button class="confirm-btn confirm-btn-cancel">Hủy</button>
+                <button class="confirm-btn confirm-btn-ok">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hồ sơ cá nhân - InNhanh24h</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>InNhanh24h</h1>
+                <p>Thiết bị in ấn chất lượng, uy tín</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="shop.html">Gian hàng</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="history.html">Lịch sử mua hàng</a></li>
+                    <li><a href="profile.html" class="active">Hồ sơ</a></li>
+                    <li><a href="#" id="logoutLink">Đăng xuất</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-container">
+            <div class="container">
+                <h2>Hồ sơ cá nhân</h2>
+
+                <div class="profile-grid">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar">
+                            <img src="images/avatar-placeholder.png" alt="Avatar" id="userAvatar" />
+                            <button class="btn btn-change-avatar">Đổi ảnh đại diện</button>
+                            <input type="file" id="avatarInput" accept="image/*" style="display: none" />
+                        </div>
+
+                        <nav class="profile-menu">
+                            <ul>
+                                <li>
+                                    <a href="#personal-info" class="active">Thông tin cá nhân</a
+                    >
+                  </li>
+                  <li><a href="#change-password">Đổi mật khẩu</a></li>
+                                <li><a href="#address-book">Sổ địa chỉ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="profile-content">
+                        <!-- Tab Thông tin cá nhân -->
+                        <div id="personal-info" class="profile-tab active">
+                            <h3>Thông tin cá nhân</h3>
+                            <form id="personalInfoForm">
+                                <div class="form-group">
+                                    <label for="profileName">Họ và tên</label>
+                                    <input type="text" id="profileName" name="name" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profileEmail">Email</label>
+                                    <input type="email" id="profileEmail" name="email" readonly />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profilePhone">Số điện thoại</label>
+                                    <input type="tel" id="profilePhone" name="phone" required />
+                                </div>
+
+                                <button type="submit" class="btn">Cập nhật thông tin</button>
+                            </form>
+                        </div>
+
+                        <!-- Tab Đổi mật khẩu -->
+                        <div id="change-password" class="profile-tab">
+                            <h3>Đổi mật khẩu</h3>
+                            <form id="changePasswordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Mật khẩu hiện tại</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="newPassword">Mật khẩu mới</label>
+                                    <input type="password" id="newPassword" name="newPassword" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Nhập lại mật khẩu mới</label
+                    >
+                    <input
+                      type="password"
+                      id="confirmNewPassword"
+                      name="confirmNewPassword"
+                      required
+                    />
+                  </div>
+
+                  <button type="submit" class="btn">Đổi mật khẩu</button>
+                </form>
+              </div>
+
+              <!-- Tab Sổ địa chỉ -->
+              <div id="address-book" class="profile-tab">
+                <h3>Sổ địa chỉ</h3>
+                <div class="address-list" id="addressList">
+                  <!-- Danh sách địa chỉ sẽ được thêm bằng JavaScript -->
+                </div>
+
+                <button class="btn btn-add-address">Thêm địa chỉ mới</button>
+
+                <!-- Form thêm địa chỉ (ẩn ban đầu) -->
+                <div
+                  class="address-form-container"
+                  id="addressFormContainer"
+                  style="display: none"
+                >
+                  <h4>Thêm địa chỉ mới</h4>
+                  <form id="addressForm">
+                    <div class="form-group">
+                      <label for="addressName"
+                        >Tên địa chỉ (ví dụ: Nhà riêng, Công ty...)</label
+                      >
+                      <input
+                        type="text"
+                        id="addressName"
+                        name="addressName"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="addressPhone">Số điện thoại</label>
+                                    <input type="tel" id="addressPhone" name="phone" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="addressStreet">Địa chỉ cụ thể</label>
+                                    <textarea id="addressStreet" name="street" rows="3" required></textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="addressCity">Thành phố/Tỉnh</label>
+                                        <input type="text" id="addressCity" name="city" required />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="addressDistrict">Quận/Huyện</label>
+                                        <input type="text" id="addressDistrict" name="district" required />
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-cancel">Hủy</button>
+                                    <button type="submit" class="btn">Lưu địa chỉ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Confirm Dialog -->
+    <div id="customConfirm" class="custom-confirm">
+        <div class="confirm-dialog">
+            <div class="confirm-message">
+                Bạn có chắc chắn muốn đăng xuất không?
+            </div>
+            <div class="confirm-buttons">
+                <button class="confirm-btn confirm-btn-cancel">Hủy</button>
+                <button class="confirm-btn confirm-btn-ok">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <p>
+                    InNhanh24h cung cấp thiết bị in ấn chất lượng giá cả hợp lý và uy tín.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Email: info@innhanh24h.com</p>
+                <p>Điện thoại: 0123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Địa chỉ</h3>
+                <p>123 Đường ABC, Quận XYZ, TP.HCM</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/profile.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>
